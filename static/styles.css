@@ -135,8 +135,151 @@ html {
   gap:30px;
   padding: 10px 10px;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   a{
     text-decoration: none;
+    color: white;
+  }
+}
+
+.component {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  gap:30px;
+  padding: 10px 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: white;
+}
+
+.searchRow {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-left: 10px;
+  input {
+    border-radius: 8px;
+    padding: 10px 10px;
+  }
+
+  select {
+    border-radius: 8px;
+  }
+}
+
+.charList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+  margin: 10px 10px;
+}
+
+.charCard {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  align-items: center;
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 2px;
+  padding: 5px;
+  gap: 5px;
+  margin: 10px 10px;
+  background-color: rgb(200,200,200);
+  img {
+    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+  }
+  button {
+    align-self: center;
+    width: 60%;
+    border-radius: 8px;
+    width: 60%;
+    padding: 10px 10px;
+    border-style: none;
+    background-color: green;
+    transition: 0.3s ease;
+  }
+  button:hover{
+    transform: scale(1.05);
+  }
+}
+
+.charDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  img {
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  button {
+    align-self: center;
+    width: 5%;
+  }
+}
+
+.username {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  padding: 15px 10px;
+  width: 20%;
+  border-radius: 10px;
+  background-color: #333;
+  input{
+    border-radius: 8px;
+    padding: 7px 7px;
+    border-style: none;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  button{
+    border-radius: 8px;
+    width: 60%;
+    padding: 10px 10px;
+    border-style: none;
+    background-color: green;
+    transition: 0.3s ease;
+  }
+  button:hover{
+    transform: scale(1.05);
+  }
+  label{
     color: white;
   }
 }

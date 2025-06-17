@@ -13,8 +13,8 @@ export default function Formulario(){
     }
 
     return(
-        <div>
-            <form method="POST" action="/">
+        <div style={{display: "flex",justifyContent: "center"}}>
+            <form class="form" method="POST" action="/">
                 <label>Username</label>
                 <input type="text" name="username" required />
                 <label>Password</label>

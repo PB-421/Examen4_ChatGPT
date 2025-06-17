@@ -5,6 +5,7 @@ export default function Header(){
         <div class="header">
             <a href="/">Inicio</a>
             <a href="/favourites">Favoritos</a>
+            <a href="/logout/do">Logout</a>
         </div>
     )
 }

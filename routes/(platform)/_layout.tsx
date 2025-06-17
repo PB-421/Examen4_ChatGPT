@@ -1,4 +1,5 @@
 import { PageProps } from "$fresh/server.ts";
+import Footer from "../../components/footer.tsx";
 import Header from "../../components/header.tsx";
 
 export default function Layout({ Component }: PageProps) {
@@ -7,6 +8,7 @@ export default function Layout({ Component }: PageProps) {
     <div>
         <Header />
         <Component />
+        <Footer />
     </div>
   );
 }

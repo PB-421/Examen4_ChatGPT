@@ -20,17 +20,23 @@ export default function CharList({charsOG,session}:data){
     },[house,name])
 
     return(
-        <div>
-            <input placeholder="Nombre" onInput={(e) => setName(e.currentTarget.value)} />
-            <select onChange={(e) => setHouse(e.currentTarget.value)}>
-                <option value="">Sin filtros</option>
-                <option value="Gryffindor">Gryffindor</option>
-                <option value="Slytherin">Slytherin</option>
-                <option value="Hufflepuff">Hufflepuff</option>
-                <option value="Ravenclaw">Ravenclaw</option>
-            </select>
-            <h4>Username: {session}</h4>
-            {chars.map((char) => (<li key={char.id}><CharCard char={char} /></li>))}
+        <div class="component">
+            <div class="searchRow">
+                <input placeholder="Nombre" onInput={(e) => setName(e.currentTarget.value)} />
+                <select onChange={(e) => setHouse(e.currentTarget.value)}>
+                    <option value="">Sin filtros</option>
+                    <option value="Gryffindor">Gryffindor</option>
+                    <option value="Slytherin">Slytherin</option>
+                    <option value="Hufflepuff">Hufflepuff</option>
+                    <option value="Ravenclaw">Ravenclaw</option>
+                </select>
+                <div class="username">
+                    <h4>Username: {session}</h4>
+                </div>
+            </div>
+            <div class="charList">
+            {chars.map((char) => (<div key={char.id}><CharCard char={char} /></div>))}
+            </div>
         </div>
     )
 }

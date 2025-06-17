@@ -38,8 +38,6 @@ export const handler:Handlers = {
 export default function Home() {
 
   return (
-    <div>
       <Formulario />
-    </div>
   );
 }

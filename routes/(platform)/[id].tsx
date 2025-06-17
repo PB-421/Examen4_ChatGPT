@@ -26,7 +26,7 @@ export default function Page(props:PageProps<data>){
 
     const {char} = props.data
     return(
-        <div>
+        <div class="component">
             <CharDetail char={char} />
         </div>
     )

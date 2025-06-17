@@ -7,6 +7,8 @@ import * as $_platform_layout from "./routes/(platform)/_layout.tsx";
 import * as $_platform_middleware from "./routes/(platform)/_middleware.ts";
 import * as $_platform_chars from "./routes/(platform)/chars.tsx";
 import * as $_platform_favourites from "./routes/(platform)/favourites.tsx";
+import * as $_platform_logout_do from "./routes/(platform)/logout/do.tsx";
+import * as $_platform_logout_view from "./routes/(platform)/logout/view.tsx";
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $index from "./routes/index.tsx";
@@ -23,6 +25,8 @@ const manifest = {
     "./routes/(platform)/_middleware.ts": $_platform_middleware,
     "./routes/(platform)/chars.tsx": $_platform_chars,
     "./routes/(platform)/favourites.tsx": $_platform_favourites,
+    "./routes/(platform)/logout/do.tsx": $_platform_logout_do,
+    "./routes/(platform)/logout/view.tsx": $_platform_logout_view,
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/index.tsx": $index,

@@ -9,7 +9,7 @@ type data = {
 export default function CharCard({char}:data) {
     function isFavourite():boolean {
         const cookie = document.cookie.split("; ")
-        const favourites = cookie.find((cookie) => cookie.trim().startsWith("favourites"))?.split("=")[1]
+        const favourites = cookie.find((cookie) => cookie.trim().startsWith("favourites="))?.split("=")[1]
         if(favourites){
             const favSep = favourites.split(",")
             if(favSep.length === 1){
@@ -23,7 +23,7 @@ export default function CharCard({char}:data) {
     }
 
     function favourites():string[]{
-        const favourites = document.cookie.split("; ").find((cookie) => cookie.trim().startsWith("favourites"))?.split("=")[1]
+        const favourites = document.cookie.split("; ").find((cookie) => cookie.trim().startsWith("favourites="))?.split("=")[1]
         if(favourites){
             const favSep = favourites.split(",")
             return favSep
@@ -70,14 +70,13 @@ export default function CharCard({char}:data) {
                 addFavourite()
             }
         }  
-
     },[fav])
 
     return(
-        <div>
-            <img src={char.image} width={100} />
+        <div class="charCard">
+            <img src={char.image} alt={char.name + " image"} />
             <h4><a href={"/"+char.id} style={{textDecoration: "none",color:" black"}}>{char.name}</a></h4>
-            <p>{char.house}</p>
+            <p>Casa: {char.house}</p>
             {!fav && <button type="button" onClick={() => setFav(true)}>Añadir a favs</button>}
             {fav && <button type="button" onClick={() => setFav(false)}>Quitar de favs</button>}
         </div>
